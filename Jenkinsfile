@@ -6,9 +6,9 @@ pipeline{
         stage('Build TADS') {
             steps {
                 sh '''
-                    echo "Building TADS"
-                    cd tads
-                    make
+                    docker info
+                    java --version
+                    docker compose info
                 '''
             }
         }
