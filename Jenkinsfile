@@ -1,5 +1,9 @@
 pipeline{
 
+    environment {
+        PATH = "./node_modules"
+    }
+
     agent any
 
     stages {
