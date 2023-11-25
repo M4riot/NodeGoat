@@ -1,16 +1,12 @@
 pipeline{
 
-    environment {
-        PATH = "./node_modules"
-    }
-
     agent any
 
     stages {
         stage('Install NPM') {
             steps {
                 sh '''
-                    npm install
+                        npm install
                 '''
             }
         }
@@ -24,7 +20,7 @@ pipeline{
         stage('Construindo Docker') {
             steps {
                 sh '''
-                    docker build;
+                    docker build .
                 '''
             }
         }
